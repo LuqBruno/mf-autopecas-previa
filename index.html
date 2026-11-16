@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>M&amp;F Auto Peças — Consulta de peças</title>
+<meta name="description" content="Prévia de apresentação: informe veículo, ano e a peça que procura e prepare sua consulta para a M&amp;F Auto Peças.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#10151C">
+<meta property="og:type" content="website">
+<meta property="og:title" content="M&amp;F Auto Peças — Consulta de peças (prévia)">
+<meta property="og:description" content="Informe o veículo e a peça que procura para preparar sua consulta.">
+<meta property="og:image" content="https://luqbruno.github.io/mf-autopecas-previa/og.jpg">
+<meta property="og:url" content="https://luqbruno.github.io/mf-autopecas-previa/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-mf.webp" type="image/webp">
+<link rel="preload" as="image" href="assets/cena-desktop.webp" media="(min-aspect-ratio: 1/1)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/cena-mobile.webp" media="(max-aspect-ratio: 1/1)" fetchpriority="high">
+<script>
+  /* Decide o modo antes da primeira pintura: "motion" = cena fixa guiada pela rolagem. */
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#consulta">Ir para a consulta</a>
+
+<div class="preview-strip" role="note">Prévia de apresentação · imagens ilustrativas<span class="xs-hide"> · conteúdo da loja em confirmação</span></div>
+
+<header class="site-header" id="topo">
+  <a class="brand" href="#topo" aria-label="M&amp;F Auto Peças — início">
+    <img src="assets/logo-mf.webp" width="520" height="248" alt="M&amp;F Auto Peças">
+  </a>
+  <nav class="nav" id="menu" aria-label="Principal">
+    <a href="#veiculo-s" data-chapter="1">Veículo</a>
+    <a href="#peca-s" data-chapter="2">Peça</a>
+    <a href="#consulta">Consulta</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn-primary header-cta" href="#consulta">Consultar uma peça</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+    <span class="sr-only">Menu</span><i aria-hidden="true"></i><i aria-hidden="true"></i>
+  </button>
+</header>
+
+<main id="conteudo">
+
+<!-- CENA INTERATIVA (modo motion): planos revelados pela linha de luz, guiados pela rolagem nativa -->
+<section class="scene" id="cena" aria-label="Como preparar a consulta">
+  <div class="stage" aria-hidden="false">
+    <div class="plate" data-plate="0" data-layer>
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="assets/cena-mobile.webp" width="941" height="1672">
+        <img src="assets/cena-desktop.webp" width="1672" height="941" alt="Cenário ilustrativo gerado por IA: crossover prata sob luz azul, com disco de freio e braço de suspensão sobre uma bancada." decoding="async" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="plate" data-plate="1" data-layer>
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="assets/veiculo-mobile.webp" width="1024" height="1536">
+        <img src="assets/veiculo-desktop.webp" width="1536" height="1024" alt="Plano ilustrativo gerado por IA: frente do crossover prata com farol aceso." decoding="async" fetchpriority="low">
+      </picture>
+    </div>
+    <div class="plate" data-plate="2" data-layer>
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="assets/peca-mobile.webp" width="1024" height="1536">
+        <img src="assets/peca-desktop.webp" width="1536" height="1024" alt="Plano ilustrativo gerado por IA: disco de freio ventilado e braço de suspensão sobre a bancada." decoding="async" fetchpriority="low">
+      </picture>
+    </div>
+    <div class="plate" data-plate="3" data-layer>
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="assets/cena-mobile.webp" width="941" height="1672">
+        <img src="assets/cena-desktop.webp" width="1672" height="941" alt="" aria-hidden="true" decoding="async" fetchpriority="low">
+      </picture>
+    </div>
+    <div class="plate" data-plate="4" data-layer>
+      <picture>
+        <source media="(max-aspect-ratio: 1/1)" srcset="assets/transicao-mobile.webp" width="941" height="1672">
+        <img src="assets/transicao-desktop.webp" width="1672" height="941" alt="" aria-hidden="true" decoding="async" fetchpriority="low">
+      </picture>
+    </div>
+    <span class="beam" aria-hidden="true"></span>
+    <div class="shade" aria-hidden="true"></div>
+
+    <div class="copy copy-hero" data-copy="hero">
+      <p class="eyebrow">Consulta de peças</p>
+      <h1>A peça começa com a informação certa.</h1>
+      <p class="lead">Informe o veículo e a peça que procura para preparar sua consulta.</p>
+      <div class="actions">
+        <a class="btn btn-primary btn-lg" href="#consulta">Consultar uma peça</a>
+        <a class="btn btn-ghost btn-lg hero-more" href="#veiculo-s" data-chapter="1">Como funciona</a>
+      </div>
+      <p class="scroll-hint" aria-hidden="true"><span></span>Role para aproximar</p>
+    </div>
+
+    <div class="copy" data-copy="1" id="veiculo" tabindex="-1">
+      <p class="eyebrow"><b>01</b> Veículo</p>
+      <h2>Comece pelo carro.</h2>
+      <p class="lead">Marca, modelo, ano e, se souber, a versão. Quanto mais completa a informação, mais objetivo fica o atendimento.</p>
+      <ul class="chips"><li>Marca e modelo</li><li>Ano</li><li>Versão (opcional)</li></ul>
+      <p class="fine">Isto não indica compatibilidade automática.</p>
+    </div>
+
+    <div class="copy" data-copy="2" id="peca" tabindex="-1">
+      <p class="eyebrow"><b>02</b> Peça</p>
+      <h2>Diga o que você procura.</h2>
+      <p class="lead">Descreva com suas palavras: nome da peça, posição, sintoma ou código, se tiver. Não é preciso escolher uma categoria.</p>
+      <ul class="chips"><li>Nome ou sintoma</li><li>Posição</li><li>Código (se tiver)</li></ul>
+    </div>
+
+    <div class="copy" data-copy="3">
+      <p class="eyebrow"><b>03</b> Consulta</p>
+      <h2>Leve tudo organizado.</h2>
+      <p class="lead">Monte o resumo, copie e envie pelo canal de atendimento da loja.</p>
+      <div class="actions"><a class="btn btn-primary btn-lg" href="#consulta">Preparar minha consulta</a></div>
+    </div>
+
+    <img class="bl-mark" src="assets/logo-bruno-luque.svg" width="26" height="35" alt="" aria-hidden="true">
+    <ol class="rail" aria-label="Etapas">
+      <li><a href="#cena" data-chapter="0" aria-label="Início"><i></i><span>Início</span></a></li>
+      <li><a href="#veiculo-s" data-chapter="1" aria-label="Veículo"><i></i><span>Veículo</span></a></li>
+      <li><a href="#peca-s" data-chapter="2" aria-label="Peça"><i></i><span>Peça</span></a></li>
+      <li><a href="#consulta" data-chapter="3" aria-label="Consulta"><i></i><span>Consulta</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- VERSÃO ESTÁTICA: movimento reduzido ou sem JS. Mesmo conteúdo, mesmos enquadramentos, sem rolagem animada. -->
+<section class="static" aria-label="Como preparar a consulta">
+  <div class="s-hero">
+    <div class="s-photo" style="--fx:62%;--fy:46%;--z:1"></div>
+    <img class="bl-mark" src="assets/logo-bruno-luque.svg" width="26" height="35" alt="" aria-hidden="true">
+    <div class="s-hero-copy">
+      <p class="eyebrow">Consulta de peças</p>
+      <p class="h1" role="heading" aria-level="1">A peça começa com a informação certa.</p>
+      <p class="lead">Informe o veículo e a peça que procura para preparar sua consulta.</p>
+      <div class="actions"><a class="btn btn-primary btn-lg" href="#consulta">Consultar uma peça</a></div>
+    </div>
+  </div>
+  <article class="s-step" id="veiculo-s">
+    <div class="s-photo s-veiculo" role="img" aria-label="Frente do crossover prata com farol aceso, plano ilustrativo gerado por IA."></div>
+    <div class="s-text">
+      <p class="eyebrow"><b>01</b> Veículo</p>
+      <h2>Comece pelo carro.</h2>
+      <p class="lead">Marca, modelo, ano e, se souber, a versão. Quanto mais completa a informação, mais objetivo fica o atendimento.</p>
+      <p class="fine">Isto não indica compatibilidade automática.</p>
+    </div>
+  </article>
+  <article class="s-step" id="peca-s">
+    <div class="s-photo s-peca" role="img" aria-label="Disco de freio e braço de suspensão sobre a bancada, plano ilustrativo gerado por IA."></div>
+    <div class="s-text">
+      <p class="eyebrow"><b>02</b> Peça</p>
+      <h2>Diga o que você procura.</h2>
+      <p class="lead">Descreva com suas palavras: nome da peça, posição, sintoma ou código, se tiver. Não é preciso escolher uma categoria.</p>
+    </div>
+  </article>
+</section>
+
+<!-- CONSULTA -->
+<section class="consulta" id="consulta" aria-labelledby="consulta-t">
+  <div class="consulta-in">
+    <div class="consulta-head">
+      <p class="eyebrow">Consulta de peça</p>
+      <h2 id="consulta-t">Qual peça você procura?</h2>
+      <p class="lead">Preencha o essencial. Não pedimos CPF, placa ou qualquer dado pessoal. O resumo é montado aqui, na sua tela, e nada é enviado automaticamente.</p>
+    </div>
+
+    <form id="form" novalidate autocomplete="off">
+      <div class="field">
+        <label for="veiculo-f">Veículo <span>marca e modelo</span></label>
+        <input id="veiculo-f" name="veiculo" type="text" maxlength="80" required placeholder="Ex.: Fiat Uno" aria-describedby="e-veiculo">
+        <p class="err" id="e-veiculo" role="alert"></p>
+      </div>
+      <div class="field field-s">
+        <label for="ano-f">Ano</label>
+        <input id="ano-f" name="ano" type="text" inputmode="numeric" maxlength="4" required placeholder="Ex.: 2014" aria-describedby="e-ano">
+        <p class="err" id="e-ano" role="alert"></p>
+      </div>
+      <div class="field">
+        <label for="versao-f">Versão <span>opcional</span></label>
+        <input id="versao-f" name="versao" type="text" maxlength="60" placeholder="Ex.: 1.0 Way" aria-describedby="e-versao">
+        <p class="err" id="e-versao" role="alert"></p>
+      </div>
+      <div class="field field-w">
+        <label for="peca-f">Peça <span>nome, posição, sintoma ou código</span></label>
+        <textarea id="peca-f" name="peca" rows="3" maxlength="240" required placeholder="Ex.: pastilha de freio dianteira" aria-describedby="e-peca"></textarea>
+        <p class="err" id="e-peca" role="alert"></p>
+      </div>
+      <p class="note field-w">As categorias de peças da loja ainda serão confirmadas. Por isso o campo é livre.</p>
+      <div class="field-w form-actions">
+        <button class="btn btn-primary btn-lg" type="submit">Preparar consulta</button>
+      </div>
+    </form>
+
+    <div class="result" id="result" hidden aria-live="polite" tabindex="-1">
+      <h3>Resumo da consulta</h3>
+      <pre id="resumo"></pre>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="copiar">Copiar consulta</button>
+        <a class="btn btn-ghost" id="wa" href="#" hidden target="_blank" rel="noopener noreferrer">Abrir WhatsApp</a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/mefautopecas/" target="_blank" rel="noopener noreferrer">Abrir Instagram da loja</a>
+      </div>
+      <p class="status" id="copy-status" role="status"></p>
+      <p class="fine">Nada foi enviado. Cole o texto no canal de atendimento que a loja indicar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contato" id="contato" aria-labelledby="contato-t">
+  <div class="contato-in">
+    <h2 id="contato-t">Fale com a loja</h2>
+    <p class="lead">O canal oficial confirmado até agora é o Instagram. Endereço, WhatsApp e horários serão incluídos depois de confirmados pela M&amp;F Auto Peças.</p>
+    <a class="btn btn-ghost btn-lg" href="https://www.instagram.com/mefautopecas/" target="_blank" rel="noopener noreferrer">@mefautopecas no Instagram</a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="foot-in">
+    <img src="assets/logo-mf.webp" width="520" height="248" alt="" class="foot-logo" loading="lazy">
+    <div class="foot-text">
+      <p><strong>Prévia de apresentação.</strong> Não é o site oficial da loja e não está publicada.</p>
+      <p>Imagens do cenário geradas por IA, apenas ilustrativas: não representam estoque, veículos à venda ou instalações. O logotipo usado é uma reconstrução a partir do avatar público do Instagram, sujeito à conferência do titular.</p>
+    </div>
+    <p class="foot-sig"><img src="assets/logo-bruno-luque.svg" width="22" height="30" alt="" aria-hidden="true"> Prévia por Bruno Luque</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
