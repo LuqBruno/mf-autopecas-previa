@@ -23,12 +23,22 @@
   (function () {
     var d = document.documentElement;
     d.classList.add('js');
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) d.classList.add('motion');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      d.classList.add('motion');
+      /* abertura curta (logo + linha de luz), uma vez por sessão */
+      var seen = false; try { seen = !!sessionStorage.getItem('mf-intro'); sessionStorage.setItem('mf-intro', '1'); } catch (e) {}
+      if (!seen) d.classList.add('intro-on');
+    }
   })();
 </script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="intro" aria-hidden="true">
+  <div class="intro-half intro-top"></div>
+  <div class="intro-half intro-bottom"></div>
+  <div class="intro-mark"><img src="assets/logo-mf.webp" width="520" height="248" alt=""><span class="intro-line"></span></div>
+</div>
 <a class="skip" href="#consulta">Ir para a consulta</a>
 
 <div class="preview-strip" role="note">Prévia de apresentação · imagens ilustrativas<span class="xs-hide"> · conteúdo da loja em confirmação</span></div>

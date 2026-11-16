@@ -236,5 +236,15 @@
     else fallback();
   });
 
+  /* ---------- Abertura ---------- */
+  if (root.classList.contains('intro-on')) {
+    var endIntro = function () {
+      root.classList.remove('intro-on');
+      ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (ev) { window.removeEventListener(ev, endIntro); });
+    };
+    ['wheel', 'touchstart', 'keydown', 'pointerdown'].forEach(function (ev) { window.addEventListener(ev, endIntro, { passive: true }); });
+    setTimeout(endIntro, 2000);
+  }
+
   sync();
 })();

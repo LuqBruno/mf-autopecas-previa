@@ -152,6 +152,31 @@ input:focus-visible, textarea:focus-visible { outline: 3px solid var(--blue-soft
 .foot-sig { display: flex; align-items: center; gap: 10px; color: var(--muted); white-space: nowrap; }
 .foot-sig img { width: 22px; height: auto; opacity: .9; }
 
+/* ABERTURA — logo, linha de luz e a cena se abre a partir da linha (~1,4 s, uma vez por sessão).
+   Não bloqueia: sem cliques capturados; rolar, tocar ou teclar encerra na hora (script.js). */
+.intro { display: none; }
+html.intro-on .intro { display: block; position: fixed; inset: 0; z-index: 90; pointer-events: none; }
+.intro-half { position: absolute; left: 0; right: 0; height: 50.2%; background: var(--base); will-change: transform; }
+.intro-top { top: 0; background: radial-gradient(120% 70% at 50% 100%, rgba(0,170,232,.16), rgba(0,170,232,0) 60%), var(--base); animation: introTop .62s cubic-bezier(.7,0,.2,1) .95s forwards; }
+.intro-bottom { bottom: 0; background: radial-gradient(120% 70% at 50% 0%, rgba(0,170,232,.16), rgba(0,170,232,0) 60%), var(--base); animation: introBottom .62s cubic-bezier(.7,0,.2,1) .95s forwards; }
+.intro-mark { position: absolute; left: 50%; bottom: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 26px; margin-bottom: -1px; animation: introMarkOut .42s cubic-bezier(.5,0,.75,0) .9s forwards; }
+.intro-mark img { width: min(300px, 62vw); height: auto; opacity: 0; animation: introLogo .6s cubic-bezier(.2,.7,.2,1) .05s forwards; }
+.intro-line { display: block; width: min(460px, 84vw); height: 2px; background: linear-gradient(90deg, transparent, var(--blue) 18%, #c8f0ff 50%, var(--blue) 82%, transparent); box-shadow: 0 0 18px 2px rgba(0,170,232,.75); transform: scaleX(0); animation: introLine .55s cubic-bezier(.6,0,.2,1) .35s forwards; }
+@keyframes introLogo { from { opacity: 0; transform: scale(.9); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes introLine { to { transform: scaleX(1); } }
+@keyframes introMarkOut { to { opacity: 0; transform: translateX(-50%) translateY(-14px) scale(1.04); } }
+@keyframes introTop { to { transform: translateY(-100%); } }
+@keyframes introBottom { to { transform: translateY(100%); } }
+@keyframes introUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes introFade { from { opacity: 0; } to { opacity: 1; } }
+html.intro-on .copy-hero > * { animation: introUp .6s cubic-bezier(.2,.7,.2,1) both; }
+html.intro-on .copy-hero > :nth-child(1) { animation-delay: 1.05s; }
+html.intro-on .copy-hero > :nth-child(2) { animation-delay: 1.12s; }
+html.intro-on .copy-hero > :nth-child(3) { animation-delay: 1.2s; }
+html.intro-on .copy-hero > :nth-child(4) { animation-delay: 1.28s; }
+html.intro-on .copy-hero > :nth-child(5) { animation-delay: 1.36s; }
+html.intro-on .site-header, html.intro-on .rail { animation: introFade .5s ease 1.15s both; }
+
 /* Tablet / celular */
 @media (max-width: 900px) {
   .brand img { height: 40px; }
